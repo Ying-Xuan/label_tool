@@ -33,11 +33,6 @@ class MainWindow_controller(QMainWindow):
         self.paths = df.path.tolist()
         self.labels = df.label.tolist()
         # print(self.paths[-1])
-
-    # def open_file(self):
-    #     filename, filetype = QFileDialog.getOpenFileName(self, "Open file", "./")
-    #     self.ui.img_path_label.setText(filename)
-    #     self.display_img(filename)
     
     def open_folder(self):
         folder_path = QFileDialog.getExistingDirectory(self, "Open file", "./")
@@ -66,13 +61,6 @@ class MainWindow_controller(QMainWindow):
     def invalid(self):
         self.img_label = 'invalid'
 
-    # def sent_label(self):
-    #     self.paths.append(self.img_paths[self.idx])
-    #     self.labels.append(self.img_label)
-    #     df = DataFrame({'path':self.paths, 'label':self.labels})
-    #     df.to_csv(self.csv_path)
-    #     csv_to_jason(self.csv_path)
-
     def last_img(self):
         self.idx  = self.idx - 1 
         self.paths.pop()
@@ -93,17 +81,3 @@ class MainWindow_controller(QMainWindow):
         else:
             self.ui.img_label.setText('End!')
             self.ui.img_path_label.setText('Empty')
-
-    # def keyPressEvent(self, event):
-    #     key = event.key()
-
-    #     if key == Qt.Key_Left:  # left
-    #         self.left()
-    #     elif key == Qt.Key_Right:  # right
-    #         self.right()
-    #     elif key == Qt.Key_Space:  # space
-    #         self.invalid()
-    #     elif key == Qt.Key_down:  # down
-    #         self.next_img()
-    #     elif key == Qt.Key_Up:  #up
-    #         self.last_img()
