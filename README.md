@@ -1,3 +1,4 @@
+Download the executable file : https://drive.google.com/file/d/1frDcB_7bzeYnQL0Lu_BmqH8bKjmD-Xkr/view?usp=sharing
 It takes about 30 seconds to open the executable file.  
 After that, you will need to click on "Open CSV" to select the attached file "a.csv".  
 Then, click on "Open Folder" to choose the folder (e.g., 01, 02) where the data for labeling is located, the executable file will iterate through all the images within this folder afterward.
